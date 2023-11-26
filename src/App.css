@@ -1,0 +1,571 @@
+:root {
+  --angle: 0deg
+}
+
+*
+{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* background-color: rgb(224, 224, 224); */
+}
+
+body {
+  background-color: rgb(0, 0, 10);
+}
+
+
+body::-webkit-scrollbar
+{
+  display: none;
+}
+
+.navBar
+{
+  background: black;
+  height: 8vh;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.423);
+  color: white;
+  padding-left: 140px;
+  z-index: 1;
+  /* padding-top: 100px; */
+  /* margin-top: 100px; */
+}
+
+.navBar button
+{
+  background: black;
+  color: white;
+  padding: 5px;
+  height: 100%;
+  /* border-radius: 100px; */
+  /* border: 2px solid red; */
+  outline: none;
+  border: 2px solid transparent;
+  text-shadow: 10px 0px 20px black;
+  transition: 0.5s;
+}
+
+.navBar button:hover{
+  color: rgb(23, 184, 184);
+  text-shadow: 1px 1px 5px rgb(23, 184, 184);
+  border-bottom:2px solid rgb(23, 184, 184);
+}
+
+.logInSignUp
+{
+  /* border: 1px solid white; */
+  display: flex;
+  position: absolute;
+  right: 200px;
+  column-gap: 20px;
+  height: 100%;
+}
+
+.logIn 
+{
+  border: 1px solid white;
+  padding: 5px 5px;
+  border-radius: 10px;
+}
+
+.imgBut {
+  display: flex;
+  justify-content: center;
+  transform: translateX(-200px);
+  opacity: 0;
+  transition: 0.25s ease;
+}
+
+.scrollActive {
+  transform: translateX(0px);
+  opacity: 1;
+}
+
+.imgBut img {
+  border: 5px solid rgba(23, 184, 184, 0.464);
+  box-shadow: 0px 0px 20px rgba(23, 184, 184, 0.464);
+  opacity: 0.5;
+  /* transform: translateX(-500px); */
+  transition: 0.25s;
+}
+.imgBut img:hover {
+  /* transform: translateX(0px); */
+  opacity: 1;
+  border: 5px solid rgb(23, 184, 184);
+  box-shadow: 0px 0px 20px rgb(23, 184, 184);
+}
+
+.DOAText {
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 10px;
+  /* background-color: rgba(23, 184, 184, 0.464); */
+}
+
+.signUp 
+{
+  /* background-color: white;
+  color: black; */
+  border: 1px solid white;
+  /* width: 200px; */
+  padding: 5px 5px;
+  border-radius: 10px;
+}
+
+.welcome
+{
+  /* border: 1px solid red; */
+  /* height: 90vh; */
+  margin-top: 5px;
+  /* box-sizing: border-box; */
+  display: flex;
+  justify-content: center;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 75px;
+  color: white;
+}
+
+.learnPage 
+{
+  /* height: 40vh; */
+  margin-top: 25px;
+  display: flex;
+  justify-content:space-around;
+  align-items: stretch;
+  /* border: 1px solid red; */
+}
+
+.modules
+{
+  border: 2px solid rgb(23, 184, 184);
+  /* display: flex; */
+  height: 250px;
+  margin-top: 20px;
+  width: 200px;
+  border-radius: 10px;
+  box-shadow: -10px -10px 20px rgba(0, 0, 0, 0.495);
+  position: relative;
+  overflow: hidden;
+  transition: 0.25s;
+}
+
+.modules:hover {
+  box-shadow: 0px 0px 20px rgb(23, 184, 184);
+}
+
+.moduleHead
+{
+  border: 1px solid rgb(23, 184, 184);
+  height: 45px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+  box-sizing: border-box;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.goToModule
+{
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  /* border: 1px solid yellow; */
+  position: absolute;
+  /* right: 20px; */
+  bottom: 10px;
+}
+
+.goToModule button
+{
+  background-color: white;
+  width: 150px;
+  border-radius: 20px;
+  transition: 0.25s;
+  box-shadow: 0px 0px 5px black;
+  border: 2px solid black;
+  /* z-index: -11; */
+}
+
+.goToModule button:hover
+{
+  background-color: black;
+  color: rgb(23, 184, 184);
+  /* word-spacing: 5px;
+  letter-spacing: 1px; */
+  /* font-size: 17px; */
+  box-shadow: 0px 0px 5px rgb(23, 184, 184);
+  border: 2px solid rgb(23, 184, 184);
+}
+
+.moduleImage
+{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid red; */
+  transition: 0.5s;
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -20px; */
+}
+
+.moduleImage:hover
+{
+  /* width: 220px; */
+}
+
+.gettingStarted {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  column-gap: 20px;
+  /* min-height: 100vh; */
+}
+
+.GSContent {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+  width: 75%;
+  color: white;
+  /* padding-left: 50px; */
+  padding-top: 100px;
+  align-items: center;
+  /* scroll-snap-type: y mandatory; */
+}
+
+.GSNav {
+  /* border: 1px solid green; */
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  /* height: 85%; */
+  /* box-shadow: -5px 5px 10px black; */
+  /* background-color: rgb(30, 30, 30); */
+  color: rgb(23, 184, 184);
+  justify-content: flex-start;
+  /* padding-top: 100px;
+  padding-bottom: 100px; */
+  align-items: center;
+  position: fixed;
+  right: 0;
+  /* top: 60px; */
+  float: right;
+  border-radius: 30px;
+  margin: 30px 30px 0px 30px;
+  row-gap: 50px;
+}
+
+.homePage {
+  color: rgb(23, 184, 184);
+}
+
+.GSNav a {
+  color: rgb(23, 184, 184);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.GSContent h1 {
+  color: rgb(23, 184, 184);
+}
+
+.IOS, .BST {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  padding-left: 50px;
+}
+
+.drawingAttention {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  /* justify-content: flex-end; */
+  padding-bottom: 50px;
+  width: 100%;
+}
+
+.gettingStarted img {
+  border-radius: 30px;
+}
+
+.DA_Head {
+  display: flex;
+  justify-content: center;
+}
+
+.buttons
+{
+  padding-bottom: 50px;
+}
+
+.buttons button {
+  width: 100px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: white;
+  background-color: rgb(23, 184, 184);
+  border: 2px solid rgb(23, 184, 184);
+  border-radius: 35px;
+  transition: 0.5s;
+}
+
+.buttons button:hover {
+  border: 2px solid rgb(23, 184, 184);
+  background-color: black;
+  color: rgb(23, 184, 184);
+}
+
+.pageNav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 20px;
+  width: 100%;
+  height: 270px;
+  background-color: rgb(30, 30, 30);
+  /* padding-top: 100px;
+  padding-bottom: 100px; */
+  border-radius: 50px;
+  border: 4px solid rgb(30, 30, 30);
+  box-shadow: 0px 0px 10px rgb(30, 30, 30);
+  transition: 0.25s;
+}
+.pageNav:hover {
+  border: 4px solid rgb(23, 184, 184);
+  box-shadow: 0px 0px 10px rgb(23, 184, 184);
+}
+
+.pageNav a {
+  border: 2px solid rgb(30, 30, 30);
+  /* border: 2px solid red; */
+  color: rgb(23, 184, 184);
+  transition: 0.25s;
+  max-width: 90%;
+}
+.pageNav a:hover {
+  border-bottom: 2px solid rgb(23, 184, 184);
+  color: white;
+}
+
+.learnNav {
+  background-color: rgb(30, 30, 30);
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  width: 100%;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  border-radius: 50px;
+  border: 4px solid rgb(30, 30, 30);
+  box-shadow: 0px 0px 10px rgb(30, 30, 30);
+  transition: 0.25s;
+}
+.learnNav:hover {
+  border: 4px solid rgb(23, 184, 184);
+  box-shadow: 0px 0px 10px rgb(23, 184, 184);
+}
+
+.horBlueLine {
+  border: 1px solid rgb(23, 184, 184);
+  width: 80%;
+}
+
+.buttons {
+  display: flex;
+  column-gap: 30px;
+}
+
+.links {
+  text-decoration: none;
+}
+
+.navbar-links {
+  color: white;
+  transition: 0.5s;
+  /* background: transparent; */
+}
+
+.navbar-links:hover {
+  color: rgb(23, 184, 184);
+  text-shadow: 0px 0px 10px rgb(23, 184, 184);
+}
+
+.learn-nav-active {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(23, 184, 184);
+  cursor: pointer;
+  /* border-radius: 4px; */
+}
+
+.learn-nav-active::before {
+  content: '';
+  border-right: 2px solid rgb(23, 184, 184);
+  border-top: 2px solid rgb(23, 184, 184);
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  left: 50px;
+  transform: rotate(45deg);
+}
+
+.learnNav a{
+  /* box-sizing: content-box; */
+  border-bottom: 2px solid rgb(30, 30, 30);
+  transition: 0.25s;
+  color: white;
+}
+
+.learnNav a:hover{
+  border-bottom: 2px solid rgb(23, 184, 184);
+  color: rgb(23, 184, 184);
+}
+
+.sl {
+  height: 92vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.slForm {
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  border: 0.1rem solid transparent;
+  border-image: conic-gradient(
+    from var(--angle),
+    rgb(23, 184, 184) 0deg 90deg,
+    rgb(30, 30, 30) 90deg 180deg,
+    rgb(23, 184, 184) 180deg 270deg,
+    rgb(30, 30, 30) 270deg 360deg
+  )
+  1 stretch;
+  background-origin: border-box;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 30px;
+  /* height: 90vh; */
+  width: 30%;
+  background: rgb(30, 30, 30);
+  color: white;
+  box-shadow: 0px 0px 300px rgb(23, 184, 184);
+  animation: rotate 10s linear infinite;
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes rotate {
+  to {
+    --angle: 360deg
+  }
+}
+
+.slFormBlock {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  /* row-gap: 10px; */
+}
+
+.slFormBlock label {
+  color: white;
+  font-size: 15px;
+  position: relative;
+  /* top: 25px; */
+  left: 20px;
+  transition: 0.5s;
+}
+
+.slFormBlock input:hover + .slFormBlock label {
+  top: 0px;
+  left: 10px;
+  color: white;
+}
+
+.slFormBlock input {
+  height: 2px;
+  position: relative;
+  /* top: 25px; */
+  transition: 0.5s;
+  /* background-color: blue; */
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  padding-left: 20px;
+}
+
+.slFormBlock input:focus, .slFormBlock input:hover {
+  height: 30px;
+  /* background-color: yellow; */
+}
+
+.slFormBlock input[type="submit"] {
+  height: 30px;
+  background-color: black;
+  transition: 0.5s;
+  color: white;
+  border: 2px solid rgb(23, 184, 184);
+}
+
+.slFormBlock input[type="submit"]:hover {
+  background-color: rgb(23, 184, 184);
+  /* background-color: black; */
+  /* color: white; */
+  color: black;
+  box-shadow: 0px 0px 10px rgb(23, 184, 184);
+}
+
+#imgDiv {
+  /* border: 1px solid red; */
+  width: min-content;
+}
+
+#imgDiv img {
+  background: radial-gradient(circle at 50% 50%, transparent 10%, rgba(0,0,0,0.95), 20%);
+}
+
+#blueDiv {
+  /* width: min-content; */
+  border: 1px solid blue;
+  position: relative;
+  /* position: fixed; */
+  /* top: 25px; */
+  left: 0;
+  width: 100%;
+  height: 100px;
+  pointer-events: none;
+  background: radial-gradient(circle at 50% 50%, transparent 10%, rgba(0,0,0,0.95), 20%);
+  /* background-color: black; */
+  z-index: 2;
+}

@@ -1,0 +1,159 @@
+.textEditorHead {
+    /* border: 1px solid red; */
+    display: flex;
+    position: fixed;
+    width: 100%;
+    padding-top: 10px;
+    background-color: black;
+    box-shadow: 0px 10px 5px black;
+    justify-content: space-around;
+    align-items: center;
+    color: rgb(23, 184, 184);
+    padding-left: 100px;
+    padding-right: 100px;
+    z-index: 3;
+}
+
+.scriptName {
+    /* border: 1px solid green; */
+    display: flex;
+}
+
+.savedStatus {
+    width: 300px;
+}
+
+#scriptN {
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 1.5em;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+    transition: 0.25s;
+    margin-top: 3px;
+}
+#scriptN:focus {
+    background-color: rgb(23, 184, 184);
+    box-shadow: 0px 0px 15px rgb(23, 184, 184);
+}
+
+#scriptPDF {
+    outline: none;
+    border: none;
+    background-color: black;
+    color: white;
+    border: 2px solid black;
+    transition: 0.25s;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-radius: 20px;
+}
+#scriptPDF:hover {
+    color: rgb(23, 184, 184);
+    border: 2px solid rgb(23, 184, 184);
+}
+
+.container {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+#editor {
+    background-color: white;
+    border-radius: 10px;
+    padding: 50px 50px;
+    width: 21cm;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 100px rgb(23, 184, 184);
+    border: none;
+    outline: none;
+    font-family: "Courier New", Courier, monospace;
+    letter-spacing: -1px;
+    font-size: 12pt;
+    /*letter-spacing: 1px;*/
+}
+
+.heading {
+    /* font-family: "Times New Roman", Times, serif; */
+    /* font-family: "Courier New", Courier, monospace; */
+    text-transform: uppercase;
+    font-weight: 900;
+    /* font-size: 16px; */
+}
+
+.TEHButton {
+    /* width: 150px; */
+    /* border: 1px solid red; */
+    display: flex;
+}
+
+.secretSave {
+    /* border: 1px solid red; */
+    /* width: 150px; */
+    position: relative;
+    display: block;
+    /* left: 330px; */
+    right: 135px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    top: 30px;
+    padding: 0px 20px;
+    opacity: 0;
+    transition: 0.25s;
+    background-color: rgba(0, 0, 0);
+}
+
+.TEHButton:hover .secretSave {
+    /* opacity: 1; */
+}
+
+.action {
+    /* font-size: 16px; */
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.character {
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+}
+
+.dialogue {
+    margin-top: 0;
+    text-align: center;
+    width: 50%;
+    margin-left: 25%;
+    margin-bottom: 20px;
+}
+
+.active {
+    /* text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.385); */
+}
+
+#instructions {
+    background-color: black;
+    color: rgb(23, 184, 184);
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    justify-content: center;
+    padding: 5px 0px;
+    display: flex;
+    column-gap: 50px;
+}
